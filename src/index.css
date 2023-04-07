@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+:root {
+	--fletnix-red: hsl(357, 92%, 47%);
+	--fletnix-white: hsl(0, 0%, 100%);
+	--fletnix-black: hsl(0, 0%, 0%);
+	--fletnix-grey-light: hsl(0, 0%, 31%);
+	--fletnix-grey-dark: hsl(0, 0%, 18%);
+
+	--fs-900: 3rem;
+	--fs-700: 1.5rem;
+	--fs-600: 1.25rem;
+	--fs-500: 1rem;
+	--fs-400: 0.875rem;
+
+	--fw-400: 400;
+	--fw-900: 900;
+
+	--nav-height: 90px;
+
+	--ff-logo: 'Bebas Neue';
+	--ff-body: 'Roboto';
+
+	--section-width: 70%;
+	--section-gutter: calc((100% - var(--section-width)) / 2);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: var(--fs-500);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+body {
+	background-color: var(--fletnix-black);
+	color: var(--fletnix-white);
+	font-family: var(--ff-body);
+	font-weight: var(--fw-400);
+	font-size: var(--fs-600);
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	max-height: 500px;
+}
+
+button {
+	font-weight: var(--fw-900);
+	background-color: var(--fletnix-red);
+	color: var(--fletnix-white);
+	border: none;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+	font-size: var(--fs-400);
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: hsla(357, 92%, 47%, 0.834);
+	transition: 0.5s ease;
+}
+
+/* Utility classes */
+
+.logo {
+	font-family: var(--ff-logo);
+	color: var(--fletnix-red);
+}
+
+.heading {
+	font-weight: var(--fw-900);
+	font-size: var(--fs-900);
+}
+
+.btn-lg {
+	font-size: var(--fs-700);
+}
+
+.container {
+	width: var(--section-width);
+	margin-inline: var(--section-gutter);
+}
+
+/* Styling */
+
+.navbar {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--nav-height);
+	z-index: 99;
+}
+
+.logo {
+	font-size: var(--fs-900);
+}
+
+.hero {
+	height: calc(100vh);
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+	background-image: url(./assets/movie-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.hero::after {
+	content: '';
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.hero > * {
+	z-index: 1;
+}
+
+.signup {
+	display: flex;
+	gap: 10px;
+	width: 600px;
+}
+
+.signup input {
+	flex: 3;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--fletnix-white);
+	padding-left: 15px;
+	border: 1px solid var(--fletnix-grey-light);
+	border-radius: 4px;
+}
+
+input:active,
+input:focus {
+	appearance: none;
+	outline: 3px solid var(--fletnix-white);
+	outline-offset: 1px;
+}
+
+.feature-card {
+	border-bottom: 10px solid var(--fletnix-grey-light);
+	padding: 70px 0px;
+}
+
+.feature-card .heading {
+	margin-bottom: 15px;
+}
+
+.feature-card .container {
+	display: grid;
+	gap: 60px;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+}
+
+.feature-card:nth-child(even) img {
+	order: -1;
+}
