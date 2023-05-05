@@ -1,4 +1,4 @@
-const faqSection = [
+const faqData = [
 	{
 		question: 'What is Fletnix?',
 		answer:
@@ -36,4 +36,4 @@ const faqSection = [
 	},
 ];
 
-export default faqSection;
+export default faqData;

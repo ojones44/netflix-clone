@@ -7,6 +7,7 @@
 	--fletnix-black: hsl(0, 0%, 0%);
 	--fletnix-grey-light: hsl(0, 0%, 31%);
 	--fletnix-grey-dark: hsl(0, 0%, 18%);
+	--fletnix-grey-med: rgba(255, 255, 255, 0.7);
 
 	--fs-900: 3rem;
 	--fs-700: 1.5rem;
@@ -60,6 +61,14 @@ body {
 	font-size: var(--fs-600);
 }
 
+.App {
+	margin-bottom: 80px;
+}
+
+::selection {
+	background-color: var(--fletnix-red);
+}
+
 ol,
 ul {
 	list-style: none;
@@ -87,6 +96,11 @@ button:hover {
 	transition: 0.5s ease;
 }
 
+footer * {
+	color: var(--fletnix-grey-med);
+	font-size: var(--fs-400);
+}
+
 /* Utility classes */
 
 .logo {
@@ -106,6 +120,12 @@ button:hover {
 .container {
 	width: var(--section-width);
 	margin-inline: var(--section-gutter);
+}
+
+.faq-heading {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	text-align: center;
 }
 
 /* Styling */
@@ -171,7 +191,7 @@ input:focus {
 }
 
 .feature-card {
-	border-bottom: 10px solid var(--fletnix-grey-light);
+	border-bottom: 10px solid var(--fletnix-grey-dark);
 	padding: 70px 0px;
 }
 
@@ -188,4 +208,115 @@ input:focus {
 
 .feature-card:nth-child(even) img {
 	order: -1;
+}
+
+.question {
+	font-size: var(--fs-700);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--fletnix-grey-dark);
+	padding: 20px;
+	cursor: pointer;
+	transition: all 0.25s ease-out;
+	margin-bottom: 7px;
+}
+
+.question svg {
+	width: 40px;
+	fill: white;
+	transition: all 0.3s ease-in;
+}
+
+.question:hover {
+	background-color: var(--fletnix-grey-light);
+}
+
+.active svg {
+	transform: rotate(225deg);
+}
+
+.answer {
+	display: none;
+	max-height: 0;
+	transform: translateY(-100%);
+	transition: all 0.5s;
+}
+
+.answer-display {
+	background-color: var(--fletnix-grey-light);
+	padding: 20px;
+	margin-bottom: 7px;
+	transform: translateY(0);
+	max-height: 500px;
+	display: block;
+	transition: all 0.5s;
+}
+
+.faq-signup {
+	padding: 65px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	border-bottom: 10px solid var(--fletnix-grey-dark);
+}
+
+.links {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+	margin-bottom: 25px;
+}
+
+.contact {
+	padding: 50px 0 30px 0;
+}
+
+#languages {
+	padding: 10px 15px 10px 10px;
+	background-color: transparent;
+	margin-bottom: 25px;
+	border: 1px solid var(--fletnix-grey-med);
+	border-radius: 4px;
+	color: var(--fletnix-white);
+}
+
+.carousel {
+	height: 650px;
+	padding: 100px;
+	width: 100%;
+	/* border: 1px solid var(--fletnix-white); */
+	overflow-x: hidden;
+	overflow-y: hidden;
+	white-space: nowrap;
+	user-select: none;
+	cursor: pointer;
+	transition: all 0.2s;
+	transform: scale(0.98);
+	will-change: transform;
+	position: relative;
+	background: transparent;
+	font-size: 0;
+	perspective: 1000px;
+	border-bottom: 10px solid var(--fletnix-grey-dark);
+}
+
+.carousel.dragging {
+	background: rgba(255, 255, 255, 0.3);
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+	transform: scale(1);
+}
+
+.card {
+	display: inline-flex;
+	width: 300px;
+}
+
+.card:nth-child(even) {
+	transform: scaleX(1.1) rotateY(30deg);
+}
+.card:nth-child(odd) {
+	transform: scaleX(1.1) rotateY(-30deg);
 }
