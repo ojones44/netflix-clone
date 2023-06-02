@@ -301,30 +301,7 @@ input:focus {
 }
 
 .carousel {
-	height: 650px;
-	padding: 100px;
-	width: 100%;
-	/* border: 1px solid var(--fletnix-white); */
-	overflow-x: hidden;
-	overflow-y: hidden;
-	white-space: nowrap;
-	user-select: none;
-	cursor: pointer;
-	transition: all 0.2s;
-	transform: scale(0.98);
-	will-change: transform;
-	position: relative;
-	background: transparent;
-	font-size: 0;
-	perspective: 1000px;
 	border-bottom: 10px solid var(--fletnix-grey-dark);
-}
-
-.carousel.dragging {
-	background: rgba(255, 255, 255, 0.3);
-	cursor: grabbing;
-	cursor: -webkit-grabbing;
-	transform: scale(1);
 }
 
 .card {
@@ -337,6 +314,19 @@ input:focus {
 }
 .card:nth-child(odd) {
 	transform: scaleX(1.1) rotateY(-30deg);
+}
+
+.swiper {
+	padding: 50px 20px;
+}
+
+.swiper .swiper-slide {
+	background-position: center;
+	background-size: contain;
+	width: 300px;
+	height: 400px;
+	-webkit-box-reflect: below 1px
+		linear-gradient(transparent, transparent, #0009);
 }
 
 @media (max-width: 768px) {
