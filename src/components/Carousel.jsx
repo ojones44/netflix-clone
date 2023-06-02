@@ -8,7 +8,7 @@ function Carousel() {
 	const [scrollLeft, setScrollLeft] = useState();
 
 	useEffect(() => {
-		fetch('../../src/data/tvShows.json')
+		fetch('/tvShows.json')
 			.then((res) => res.json())
 			.then((data) => {
 				setShows(data);
