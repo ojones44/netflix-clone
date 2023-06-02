@@ -36,7 +36,6 @@ function Carousel() {
 		e.preventDefault();
 		const slider = e.currentTarget;
 		const x = e.pageX - slider.offsetLeft;
-		console.log(x, startX);
 		const walk = (x - startX) * 2.5;
 		slider.scrollLeft = scrollLeft - walk;
 	}

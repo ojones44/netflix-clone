@@ -36,7 +36,7 @@ function FaqSection() {
 				return <FaqCard key={i} faq={faq} />;
 			})}
 
-			<div className='faq-signup'>
+			<div className='faq-signup container'>
 				<p>
 					Ready to watch? Enter your email to create or restart your membership
 				</p>
