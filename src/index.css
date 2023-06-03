@@ -69,6 +69,10 @@ body {
 	background-color: var(--fletnix-red);
 }
 
+.logo::selection {
+	background-color: var(--fletnix-white);
+}
+
 ol,
 ul {
 	list-style: none;

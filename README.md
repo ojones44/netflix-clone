@@ -2,7 +2,7 @@
 <h1>
 FLETNIX 📺
 </h1>
-<img src='./src/assets/app-snap.png' width='450' >
+<img src='public\app-snap.png' width='450' >
 </div>
 
 ---
